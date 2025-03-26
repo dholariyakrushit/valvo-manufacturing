@@ -6,14 +6,31 @@
     margin-top: 100px;
   }
   .slider-container {
+    position: relative;
     .slick-slider {
-      .slick-arrow {
-        &::before{
-          content: '';
-            width: 40px;
-            height: 40px;
-            border-radius: 35px;
-            border-width: 1px;
+      .slick-prev {
+        // width: 40px;
+        // height: 40px;
+        &::before {
+          content: url("../../../assets/images/products/right-arrow.svg");
+          border-radius: 35px;
+          border-width: 1px;
+          color: black;
+          position: absolute;
+          top: 219px;
+          left: 480px;
+          z-index: 1;
+        }
+      }
+      .slick-next {
+        &::after {
+          content: url("../../../assets/images/products/left-arrow.svg");
+          border-radius: 35px;
+          border-width: 1px;
+          color: black;
+          position: absolute;
+          top: 219px;
+          left: -480px;
         }
       }
     }
