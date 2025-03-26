@@ -1,0 +1,45 @@
+@import "../../../assets/scss/App.scss";
+
+.navbar-container {
+  background-color: $primary-color;
+  color: $white !important;
+  .navbar-section {
+    max-width: 1320px;
+    width: 100%;
+    margin-inline: auto;
+    height: 101px;
+
+    @media (max-width: "768px") {
+      height: auto;
+    }
+  }
+}
+
+.navbar-title {
+  font-family: poppins-regular;
+  color: $white !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 28px;
+  text-align: center;
+  &::after {
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top: 6px;
+  }
+  &:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid $white;
+    margin-inline: auto;
+    border-radius: 20px;
+    margin-top: 6px;
+  }
+  &:active,
+  &:hover {
+    font-weight: 700 !important;
+  }
+}
+.navbar-nav {
+}
