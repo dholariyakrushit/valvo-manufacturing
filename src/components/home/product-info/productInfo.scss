@@ -5,9 +5,55 @@
   @media (max-width: 991px) {
     margin-top: 100px;
   }
+  .featured-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    @media (max-width: 991px) {
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-family: roboto-regular;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0%;
+      color: $primary-color;
+      max-width: 447px;
+      display: flex; // Flex makes alignment easier
+      align-items: center;
+      gap: 15px;
+      @media (max-width: 991px) {
+        font-size: 32px;
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 48px;
+        background-color: #ff6b35;
+        width: 6px;
+        @media (max-width: 991px) {
+          height: 40px;
+        }
+      }
+    }
+    .explore-btn {
+      padding: 12px 24px;
+      background-color: $primary-color;
+      color: $white;
+      font-family: roboto-regular;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+  }
   .slider-container {
-    position: relative;
     .slick-slider {
+      position: relative;
       .slick-prev {
         // width: 40px;
         // height: 40px;
@@ -17,22 +63,47 @@
           border-width: 1px;
           color: black;
           position: absolute;
-          top: 219px;
-          left: 480px;
+          bottom: 53px;
+          left: -18px;
           z-index: 1;
         }
       }
       .slick-next {
-        &::after {
+        &::before {
           content: url("../../../assets/images/products/left-arrow.svg");
           border-radius: 35px;
           border-width: 1px;
           color: black;
           position: absolute;
-          top: 219px;
-          left: -480px;
+          bottom: 53px;
+          left: -7px;
         }
       }
     }
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  .produc-sm-container {
+    @media (min-width: 991px) {
+      display: none;
+    }
+  }
+  .explore-sm-btn {
+    padding: 12px 24px;
+    background-color: $primary-color;
+    color: $white;
+    font-family: roboto-regular;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    @media (min-width: 991px) {
+      display: none;
+    }
+    &:hover, &:active{
+      background-color:$white ;
+      color: $primary-color;
+  }
   }
 }

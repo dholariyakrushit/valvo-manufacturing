@@ -1,0 +1,68 @@
+@import "../../assets/scss/App.scss";
+
+.product-info-container {
+  margin-top: 200px;
+  @media (max-width: 991px) {
+    margin-top: 100px;
+  }
+  .featured-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    @media (max-width: 991px) {
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0%;
+      color: $primary-color;
+      max-width: 447px;
+      display: flex; // Flex makes alignment easier
+      align-items: center;
+      gap: 15px;
+      @media (max-width: 991px) {
+        font-size: 32px;
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 48px;
+        background-color: #ff6b35;
+        width: 6px;
+        @media (max-width: 991px) {
+          height: 40px;
+        }
+      }
+    }
+    .explore-btn {
+      padding: 12px 24px;
+      background-color: $primary-color;
+      color: $white;
+      font-family: roboto-regular;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+  }
+  .product-container {
+    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 775px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .product-card {
+    }
+  }
+}

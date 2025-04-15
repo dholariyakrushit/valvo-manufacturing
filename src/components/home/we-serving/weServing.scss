@@ -1,0 +1,72 @@
+@import "../../../assets/scss/App.scss";
+
+.serving-container {
+  margin-top: 200px;
+  @media (max-width: 991px) {
+    margin-top: 94px;
+  }
+  .serving-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    @media (max-width: 991px) {
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-family: roboto-regular;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0%;
+      color: $primary-color;
+      max-width: 447px;
+      display: flex; // Flex makes alignment easier
+      align-items: center;
+      gap: 15px;
+      @media (max-width: 991px) {
+        font-size: 32px;
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 48px;
+        background-color: #ff6b35;
+        width: 6px;
+        @media (max-width: 991px) {
+          height: 40px;
+        }
+      }
+    }
+    .explore-btn {
+      padding: 12px 24px;
+      background-color: $primary-color;
+      color: $white;
+      font-family: roboto-regular;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+  }
+  .serving-cards {
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 775px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .serving-card {
+      text-align: center;
+      border-radius: 10px;
+    }
+  }
+}

@@ -19,12 +19,17 @@
         display: flex; // Flex makes alignment easier
         align-items: center;
         gap: 15px;
+        @media (max-width: 768px) {
+          font-size: 32px;
+          margin-bottom: 16px;
+          line-height: 40px;
+        }
         &::before {
           content: "";
           display: inline-block;
-          height: 144px;
+          height: 108px;
           background-color: #ff6b35;
-          width: 10px;
+          width: 11px;
         }
       }
       p {
