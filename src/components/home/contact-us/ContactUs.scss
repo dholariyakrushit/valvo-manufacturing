@@ -102,46 +102,61 @@
         }
       }
       .card-body {
+        position: relative;
+        .success-msg{
+          position: absolute;
+          z-index: 1;
+          top: -45px;
+        }
         form {
           display: flex;
           gap: 25px;
           flex-direction: column;
           align-items: center;
           padding: 0px !important;
-          .input-field {
-            font-family: roboto-regular;
-            width: 480px;
-            height: 60px;
-            gap: 10px;
-            padding-top: 16px;
-            padding-right: 50px;
-            padding-bottom: 16px;
-            padding-left: 20px;
-            border-radius: 5px;
-            border-width: 0.5px;
-            border: 1px solid $white;
-            background-color: $primary-color;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 28px;
-            letter-spacing: 0%;
-            color: $white !important;
-            &::placeholder {
+          .field-section{
+            position: relative;
+            .input-field {
               font-family: roboto-regular;
+              width: 480px;
+              height: 60px;
+              gap: 10px;
+              padding-top: 16px;
+              padding-right: 50px;
+              padding-bottom: 16px;
+              padding-left: 20px;
+              border-radius: 5px;
+              border-width: 0.5px;
+              border: 1px solid $white;
+              background-color: $primary-color;
               font-weight: 400;
               font-size: 18px;
               line-height: 28px;
               letter-spacing: 0%;
               color: $white !important;
+              &::placeholder {
+                font-family: roboto-regular;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0%;
+                color: $white !important;
+              }
+              @media (max-width: "775px") {
+                width: 375px;
+              }
+              @media (max-width: "475px") {
+                width: 311px;
+              }
+              @media (max-width: "375px") {
+                width: 280px;
+              }
             }
-            @media (max-width: "775px") {
-              width: 375px;
-            }
-            @media (max-width: "475px") {
-              width: 311px;
-            }
-            @media (max-width: "375px") {
-              width: 280px;
+            .error-message{
+              font-family: roboto-regular;
+              margin-bottom: 0px !important;
+              position: absolute;  
+              font-size: 14px;
             }
           }
           .btn-submit {
